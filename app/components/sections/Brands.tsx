@@ -2,7 +2,8 @@
 
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
-import { reveal } from "@/lib/reveal";
+import { reveal } from "@/lib/animations/reveal";
+import Marqee from "../Marquee";
 
 const Brands = () => {
   const headingRef = useRef(null);
@@ -19,7 +20,7 @@ const Brands = () => {
   return (
     <section className="h-screen">
       <div ref={headingRef} className="text-white leading-tight">
-        <p className="uppercase text-center font-sans font-medium">
+        <p className="uppercase text-center font-sans text-yellow-400 font-medium">
           Trusted by brands that
         </p>
         <p className="uppercase text-center font-sans text-[6rem] font-extrabold  font-stretch-ultra-condensed tracking-tight">
@@ -28,6 +29,9 @@ const Brands = () => {
             the world
           </span>
         </p>
+      </div>
+      <div>
+        <Marqee />
       </div>
     </section>
   );

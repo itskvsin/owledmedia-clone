@@ -1,4 +1,4 @@
-import gsap from './gsap';
+import gsap from '../gsap';
 
 export const reveal = (el: HTMLElement | null) => {
     gsap.from(el, {

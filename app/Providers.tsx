@@ -1,9 +1,12 @@
 "use client";
 
-import { createContext } from "react";
+import { useEffect } from "react";
+import { intiSmoothScroll } from "@/lib/smooth-scroll";
 
-export const AppContext = createContext({});
+export function Providers({ children }: { children: React.ReactNode }) {
+  useEffect(() => {
+    intiSmoothScroll();
+  }, []);
 
-export function Providers({ children }: any) {
-  return <AppContext.Provider value={{}}>{children}</AppContext.Provider>;
+  return children;
 }
